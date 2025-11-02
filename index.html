@@ -2,23 +2,72 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
-  <title>Reconhecimento Facial Portaria</title>
+  <title>Portaria - Reconhecimento Facial</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+      background-color: #f2f2f2;
+    }
+
+    h1 {
+      text-align: center;
+      color: #333;
+    }
+
+    fieldset {
+      border: 2px solid #333;
+      padding: 15px;
+      margin-bottom: 20px;
+      background-color: #fff;
+    }
+
+    legend {
+      font-weight: bold;
+      color: #333;
+    }
+
+    input[type="text"] {
+      padding: 5px;
+      font-size: 16px;
+      width: 200px;
+    }
+
+    button {
+      padding: 6px 12px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    video {
+      border: 2px solid #000;
+      display: block;
+      margin: 10px 0;
+    }
+
+    #status {
+      font-weight: bold;
+      color: green;
+    }
+  </style>
+
+  <!-- Face API JS -->
   <script defer src="face-api.min.js"></script>
   <script defer src="script.js"></script>
 </head>
 <body>
-  <h1>Cadastro e Reconhecimento Facial</h1>
+  <h1>Portaria - Reconhecimento Facial</h1>
 
-  <div>
-    <h2>Cadastro</h2>
-    <input type="text" id="username" placeholder="Nome do usuário">
+  <fieldset>
+    <legend>Cadastro de Usuário</legend>
+    <input type="text" id="username" placeholder="Digite o nome do usuário">
     <button id="registerBtn">Cadastrar</button>
-  </div>
+  </fieldset>
 
-  <div>
-    <h2>Reconhecimento</h2>
-    <video id="video" width="320" height="240" autoplay muted></video>
+  <fieldset>
+    <legend>Reconhecimento Facial</legend>
+    <video id="video" width="640" height="480" autoplay muted></video>
     <p id="status">Aguardando reconhecimento...</p>
-  </div>
+  </fieldset>
 </body>
 </html>
