@@ -1,4 +1,4 @@
-cconst video = document.getElementById('video');
+const video = document.getElementById('video');
 const status = document.getElementById('status');
 
 async function startVideo() {
